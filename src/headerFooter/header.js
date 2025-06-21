@@ -42,7 +42,7 @@ export function Header() {
   return (
     <header className="header">
       <div className="header-left">
-        <Link to="/interior" className="logo-link">
+        <Link to="/" className="logo-link">
           <img src={logo} alt="Interno Logo" className="logo" />
           <span className="brand-name">Interno</span>
         </Link>
@@ -50,7 +50,7 @@ export function Header() {
 
       <nav className="header-right">
         <ul className="nav-links">
-          <li><Link to="/interior">Home</Link></li>
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/aboutus">About Us</Link></li>
           <li><Link to="/services">Our Services</Link></li>
           <li><Link to="/projects">Portfolio</Link></li>

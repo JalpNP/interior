@@ -19,7 +19,7 @@ import { Project } from './project/project';
 import { Terms } from './Allterms/terms';
 import { Cookies } from './Allterms/cookies';
 import { Privacy } from './Allterms/privacy';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, HashRouter } from 'react-router-dom';
 import { SmoothScroll } from './smooth';
 import Login from './Login/Login';
 import MyContextProvider from './MyContext/MyContextProvider';
@@ -28,7 +28,7 @@ import Register from './Register/Register';
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <MyContextProvider>
     <SmoothScroll />
       <Header />
@@ -45,7 +45,7 @@ function App() {
         <Route path='/blog-details' element={<BlogDetails/>}></Route>
         <Route path='/services' element={<Services/>}></Route>
         <Route path='/service-single' element={<ServiceSingle/>}></Route>
-        <Route path='/interior' element={<Home/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
@@ -56,7 +56,7 @@ function App() {
       </Routes>
       <Footer />
       </MyContextProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
