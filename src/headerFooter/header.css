@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+  }
+  
+  .header {
+    /* width: 100%; */
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+    .header-left {
+      display: flex;
+      align-items: center;
+  
+      .logo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-right: 10px;
+      }
+  
+      .brand-name {
+        font-family: 'DM Serif Display', serif;
+        font-size: 26px;
+        color: #333;
+      }
+    }
+  
+    .header-right {
+      flex: 1;
+  
+      .nav-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        justify-content: flex-end;
+  
+        li {
+          margin-left: 30px;
+          position: relative;
+  
+          a,
+          .profile-name {
+            font-family: 'Jost', sans-serif;
+            font-size: 16px;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+  
+            &:hover {
+              color: #007BFF;
+            }
+          }
+  
+          .login-btn {
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: white !important;
+            border-radius: 20px;
+            font-weight: 500;
+  
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+  
+          &.profile-dropdown {
+            position: relative;
+  
+            .dropdown-menu {
+              position: absolute;
+              top: 100%;
+              right: 0;
+              margin-top: 10px;
+              background: white;
+              border-radius: 8px;
+              box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+              overflow: hidden;
+              min-width: 160px;
+  
+              li {
+                padding: 12px 16px;
+                font-size: 14px;
+                transition: background 0.3s;
+                cursor: pointer;
+  
+                &:hover {
+                  background-color: #f1f1f1;
+                }
+  
+                a {
+                  color: #333;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
